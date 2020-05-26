@@ -8,7 +8,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface OwnerService {
-    @GET("$BASE_URL/users/{username}")
+    @GET("/users/{username}/")
     fun loadOwner(
         @Path("username")
         userName: String
