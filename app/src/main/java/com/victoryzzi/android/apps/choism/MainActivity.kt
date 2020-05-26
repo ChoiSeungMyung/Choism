@@ -1,7 +1,6 @@
 package com.victoryzzi.android.apps.choism
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -28,10 +27,11 @@ class MainActivity : AppCompatActivity() {
                     responseOwnerLiveData.observe(this@MainActivity, Observer {
                         binding.owner = it
                     })
-
                     responseRepoLiveData.observe(this@MainActivity, Observer {
                         repoListAdapter.submitList(it)
                     })
+
+                    binding.mainRecyclerview.adapter = repoListAdapter
                 }
             }
         }

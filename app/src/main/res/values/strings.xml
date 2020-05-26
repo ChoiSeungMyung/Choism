@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Choism</string>
+
+    <string name="data_null"></string>
 </resources>

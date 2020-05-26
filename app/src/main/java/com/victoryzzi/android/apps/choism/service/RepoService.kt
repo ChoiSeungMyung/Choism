@@ -9,7 +9,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RepoService {
-    @GET("/users/{username}/repos/")
+    @GET("users/{username}/repos")
     fun loadRepos(
         @Path("username")
         userName: String
